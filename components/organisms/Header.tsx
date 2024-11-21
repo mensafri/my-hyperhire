@@ -9,12 +9,12 @@ export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <header className="bg-transparent sticky top-0 py-4 px-36 flex items-center justify-between">
-      <div className="flex items-center space-x-8">
+    <header className="bg-transparent sticky top-0 py-4 px-6 sm:px-12 lg:px-36 flex items-center justify-between z-50">
+      <div className="flex items-center space-x-4 sm:space-x-8">
         <Logo />
       </div>
 
-      <nav className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
+      <nav className="absolute left-1/2 transform -translate-x-1/2 space-x-4 sm:space-x-8 hidden md:flex">
         <div className="relative">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -28,7 +28,7 @@ export default function Header() {
         </a>
       </nav>
 
-      <div className="flex items-center space-x-8">
+      <div className="items-center space-x-4 sm:space-x-8 hidden md:flex">
         <Button label="문의하기" />
       </div>
     </header>
